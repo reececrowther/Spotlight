@@ -1,0 +1,44 @@
+.login-section{
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.login-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-form{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.logo{
+    padding: .5em;
+}
+
+.google-signin{
+    filter: drop-shadow(0, 4px, 4px, rgba(0, 0, 0, 0.5));
+}
+
+.google-button{
+    
+}
