@@ -26,7 +26,7 @@ function Navbar({ searchTerm, setSearchTerm, user}) {
           <Link to={`user-profile/${user?._id}`} className="nav-user-img">
             <img src={user.image} alt="user-pic" />
           </Link>
-          <Link to="/create-pin" fontSize={20} className="create-icon">
+          <Link to="/create-photo" fontSize={20} className="create-icon">
             <IoMdAdd />
           </Link>
         </div>

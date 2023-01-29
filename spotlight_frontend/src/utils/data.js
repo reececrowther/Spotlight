@@ -102,3 +102,113 @@ export const feedQuery = `*[_type == "photo"] | order(_createdAt desc) {
         },
       },
     } `;
+
+
+    export const photoDetailQuery = (photoId) => {
+      const query = `*[_type == "pin" && _id == '${photoId}']{
+        image{
+          asset->{
+            url
+          }
+        },
+        _id,
+        title, 
+        about,
+        category,
+        postedBy->{
+          _id,
+          userName,
+          image
+        },
+       like[]{
+          postedBy->{
+            _id,
+            userName,
+            image
+          },
+        },
+        comments[]{
+          comment,
+          _key,
+          postedBy->{
+            _id,
+            userName,
+            image
+          },
+        }
+      }`;
+      return query;
+    };
+
+    export const photoDetailMorePhotoQuery = (photo) => {
+      const query = `*[_type == "photo" && category == '${photo.category}' && _id != '${photo._id}' ]{
+        image{
+          asset->{
+            url
+          }
+        },
+        _id,
+        postedBy->{
+          _id,
+          userName,
+          image
+        },
+        like[]{
+          _key,
+          postedBy->{
+            _id,
+            userName,
+            image
+          },
+        },
+      }`;
+      return query;
+    };
+
+    export const userCreatedPhotoQuery = (userId) => {
+      const query = `*[ _type == 'photo' && userId == '${userId}'] | order(_createdAt desc){
+        image{
+          asset->{
+            url
+          }
+        },
+        _id,
+        postedBy->{
+          _id,
+          userName,
+          image
+        },
+        like[]{
+          postedBy->{
+            _id,
+            userName,
+            image
+          },
+        },
+      }`;
+      return query;
+    };
+
+    export const userLikedPhotoQuery = (userId) => {
+      const query = `*[_type == 'photo' && '${userId}' in like[].userId ] | order(_createdAt desc) {
+        image{
+          asset->{
+            url
+          }
+        },
+        _id,
+        postedBy->{
+          _id,
+          userName,
+          image
+        },
+        like[]{
+          postedBy->{
+            _id,
+            userName,
+            image
+          },
+        },
+      }`;
+      return query;
+    };
