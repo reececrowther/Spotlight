@@ -1,0 +1,163 @@
+.photo-detail-con{
+    display: flex; 
+    flex-direction: column;     
+}
+
+.photo-detial-img-con{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.photo-detial-img-con img{
+    border-radius: 30px;
+    max-height: 600px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.photo-details{
+    padding: 1em;
+}
+
+.under-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download-photo-button{
+    display: flex; 
+    padding: 0.5rem; 
+    font-size: 2rem;
+    color: var(--white);
+    line-height: 1.75rem; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 100%; 
+    opacity: 0.75; 
+}
+
+.download-photo-button:hover{
+    opacity: 1;
+}
+
+.user-profile-link{
+    display: flex;
+    padding: 0.5rem;
+    background-color: var(--light-black);
+    color: var(--white);
+    text-decoration: none;
+    align-items: center;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+}
+
+.user-profile-link img{
+    width: 2rem; 
+    height: 2rem; 
+    border-radius: 100%; 
+}
+
+.user-profile-link p{
+    margin: 0;
+}
+
+.photo-title{
+    overflow-wrap: break-word; 
+}
+
+.comments-con{
+    overflow-y: auto;
+    max-height: 370px;
+}
+
+.comments-user{
+    display: flex; 
+    margin-top: 1.25rem; 
+    gap: 0.5rem; 
+    align-items: center; 
+    border-radius: 0.5rem; 
+}
+
+.comments-user img,
+.add-comment-con img,
+.comment-user img{
+    width: 2.5rem; 
+    height: 2.5rem; 
+    border-radius: 100%; 
+    cursor: pointer; 
+}
+
+.user-comment{
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-user{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: .5em;
+}
+
+.comment-user .user-comment p{
+    margin: 0;
+}
+
+.comment-user .user-comment .user-name{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.add-comment-con{
+    display: flex; 
+    margin-top: 1.5rem; 
+    flex-wrap: nowrap; 
+    gap: 0.75rem; 
+}
+
+.add-comment-con .user-link{
+    display: flex;
+    width: 2.5rem; 
+    height: 2.5rem; 
+}
+
+
+.add-comment-input{
+    padding: 0.5rem; 
+    border-radius: 1rem; 
+    border-width: 2px; 
+    border-color: #F3F4F6; 
+    outline: 0; 
+    width: -webkit-fill-available;
+}
+
+.add-comment-button{
+    padding: .5em 1.25em;
+    background-color: #EF4444; 
+    color: #ffffff; 
+    font-size: 1rem;
+    line-height: 1.5rem; 
+    font-weight: 600; 
+    border-radius: 9999px; 
+    border: none;
+    outline: 0; 
+}
+
+
+
+.more-title{
+    margin-top: 2em;
+}
+
+
+@media (min-width: 1400px){
+    .photo-detail-con{
+        flex-direction: row;
+    }
+    .photo-details{
+        min-width: 620px;
+    }
+}

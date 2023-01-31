@@ -105,7 +105,7 @@ export const feedQuery = `*[_type == "photo"] | order(_createdAt desc) {
 
 
     export const photoDetailQuery = (photoId) => {
-      const query = `*[_type == "pin" && _id == '${photoId}']{
+      const query = `*[_type == "photo" && _id == '${photoId}']{
         image{
           asset->{
             url

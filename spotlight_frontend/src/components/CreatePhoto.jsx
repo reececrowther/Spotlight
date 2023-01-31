@@ -7,6 +7,8 @@ import { categories } from '../utils/data';
 import { client } from '../client';
 import Spinner from './Spinner';
 
+import '../css/createPhoto.css'
+
 function CreatePhoto({ user }) {
 
   const [title, setTitle] = useState('');
